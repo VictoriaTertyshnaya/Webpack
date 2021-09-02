@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<form name="form_main">
+  <div>
+    <span id="second">10000000</span>
+  </div>
+
+  <br />
+
+  <button type="button" name="start">start</button>
+  <button type="button" name="pause">pause</button>
+</form>
+
+
+
+      <script>
+
+
+"use strict";
+
+let second = 10000000;
+
+let cron;
+
+start();
+
+document.form_main.start.onclick = () => start();
+document.form_main.pause.onclick = () => pause();
+
+function start() {
+pause();
+cron = setInterval(() => { timer(); }, 1000);
+}
+
+function pause() {
+clearInterval(cron);
+}
+
+function timer() {
+second--;
+
+document.getElementById('second').innerText = second;
+}
+
+
+    
+      </script>
+</body>
+</html>
