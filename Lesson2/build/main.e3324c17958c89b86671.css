@@ -1,0 +1,12 @@
+/*!************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./output-css/style.css ***!
+  \************************************************************************/
+.header_timer {
+    color: rgb(19, 19, 49);
+    font-size: large;
+}
+
+.header_calc {
+    color: rgb(19, 19, 49);
+    font-size: large;
+}
