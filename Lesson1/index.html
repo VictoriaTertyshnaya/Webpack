@@ -10,12 +10,12 @@
 
 <body>
 
-    <a href="#" id="calcLink">Калькулятор дат</a>
-    <a href="#" id="timeLink">Таймер</a>
+    <a href="#" onclick="openbox ('calc_container','timer_container',1); return false">Калькулятор дат</a>
+    <a href="#" onclick="openbox ('calc_container','timer_container',2); return false">Таймер</a>
 
 
 
-    <div id="timer_container">
+    <div id="timer_container" style="display: none">
         <h2>Таймер</h2>
         <form name="calcTime" id="calcTime">
             <div>
@@ -34,7 +34,7 @@
 
     </div>
 
-    <div id="calc_container">
+    <div id="calc_container" style="display: block">
         <h2>Калькулятор дат</h2>
         <form id="calcDate">
             <label for="dateFrom">
