@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор дат</title>
+</head>
+
+<body>
+
+    <a href="#" onclick="openbox ('calc_container','timer_container',1); return false">Калькулятор дат</a>
+    <a href="#" onclick="openbox ('calc_container','timer_container',2); return false">Таймер</a>
+
+
+
+    <div id="timer_container" style="display: none">
+        <h2>Таймер</h2>
+        <form name="calcTime" id="calcTime">
+            <div>
+                <span id="second">0</span>
+            </div>
+
+            <br />
+            <label for="setTimer">
+                <input type="number" name="setTimer">
+            </label>
+            <button type="submit" name="set">Set timer</button>
+            <button type="button" name="start">Start</button>
+            <button type="button" name="pause">Stop</button>
+        </form>
+
+
+    </div>
+
+    <div id="calc_container" style="display: block">
+        <h2>Калькулятор дат</h2>
+        <form id="calcDate">
+            <label for="dateFrom">
+            Первая дата:
+            <input type="date" name="dateFrom" />
+        </label>
+            <label for="dateTo">
+            Вторая дата:
+            <input type="date" name="dateTo" />
+        </label>
+            <button type="submit">Расчитать промежуток</button>
+        </form>
+        <p id="output"></p>
+    </div>
+
+    <script src="./js/howler.core.js"></script>
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
