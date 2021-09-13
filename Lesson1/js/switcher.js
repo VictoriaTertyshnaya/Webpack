@@ -1,29 +1,12 @@
-let isCalc = true;
-let isTime = false;
-
-const calcLink = document.getElementById('calcLink');
-const calc_container = document.getElementById('calc_container');
-const timeLink = document.getElementById('timeLink');
-const timer_container = document.getElementById('timer_container');
-timer_container.style.display = 'none';
-
-export function addSwitcher() {
-    calcLink.addEventListener('click', (event) => {
-        if (isTime) {
-            calc_container.style.display = 'block';
-            timer_container.style.display = 'none';
-            isCalc = true;
-            isTime = false;
-        };
-    })
-
-
-    timeLink.addEventListener('click', (event) => {
-        if (isCalc) {
-            timer_container.style.display = 'block';
-            calc_container.style.display = 'none';
-            isCalc = false;
-            isTime = true;
-        };
-    })
-}
+export function openbox(element_id, element2_id, idd) {
+    let obj = document.getElementById(element_id);
+    let obj2 = document.getElementById(element2_id);
+    if (idd == 1) {
+        obj.style.display = 'block';
+        obj2.style.display = 'none';
+    } else {
+        obj.style.display = 'none';
+        obj2.style.display = 'block';
+    }
+    console.log('openbox')
+};
