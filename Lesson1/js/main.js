@@ -1,13 +1,13 @@
 import { printError, printResult } from "./output.js"
 import calcDatesDiff from "./calcDatesDiff.js"
-import { addSwitcher } from './switcher.js';
+import { openbox } from './switcher.js';
 import { greatTimer } from './timer.js';
-
 
 const form = document.getElementById('calcDate');
 
-addSwitcher();
 greatTimer();
+
+window.openbox = openbox;
 
 form.onsubmit = function(event) {
     event.preventDefault();
@@ -25,4 +25,6 @@ form.onsubmit = function(event) {
     const datesDiff = calcDatesDiff(dateFrom, dateTo);
 
     printResult(datesDiff);
-}
+
+    openbox();
+};
